@@ -50,15 +50,20 @@
 </style>
 <body>
     <center>
-       
+
         <br><br>
         <p> <h4>This is a calculator app<br> Lets build something!</h4></p><br>
+        @{
+        if(ViewBag.Result != null){
+            <span> <p> @ViewBag.Result</p></span>
+              }
+        }
 
-      <form asp-controller="calc" asp-action ="show" method="post">
-       First number here:   <input type="number" name="first"/><br /><br />
-          Second number here: <input type="number" name="second"/><br />
-          <button type="submit"> Submit </button>
-      </form>
+        <form asp-controller="calc" asp-action="index" method="post">
+            First number here:   <input type="number" name="first" /><br /><br />
+            Second number here: <input type="number" name="second" /><br />
+            <button type="submit"> Submit </button>
+        </form>
     </center>
 
 </body>

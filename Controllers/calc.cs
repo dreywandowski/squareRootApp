@@ -24,9 +24,35 @@ namespace CalculatorWeb.Controllers
         {
             int a = first;
             int b = second;
-            int result = first + second;
+            double sqrtA = Math.Sqrt(a);
+            double sqrtB = Math.Sqrt(b);
+             
+             if (sqrtA > sqrtB){
+                ViewBag.Result = "The number  " + a +"  with a square root of   "+ sqrtA+"   has a higher square root than  "+ b+"  which has a square root of  "+ sqrtB;
+             }
 
-            ViewBag.Result = result;
+              else if (sqrtB > sqrtA){
+                ViewBag.Result = "The number  " + b +"  with a square root of   "+ sqrtB+"   has a higher square root than  "+ a+"  which has a square root of  "+ sqrtA;
+
+             }
+
+             else if (sqrtA == sqrtB){
+                ViewBag.Result = "The square roots of both numbers are the same. Kindly enter new sets of numbers";
+             }
+            
+            else if ((a < 0 ) && (b < 0)){
+             ViewBag.Result = "We cannot accept negative values. Enter a positive value please";
+            }
+
+            else if ((a < 0) || (b < 0)){
+               ViewBag.Result = "We cannot accept negative values. Enter a positive value please";  
+            }
+
+            else{
+                
+            }
+
+          
 
             return View();
         }
