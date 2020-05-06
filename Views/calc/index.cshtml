@@ -37,6 +37,11 @@
         background-color: red;
     }
 
+#result{
+  border-style: inset groove solid;
+  border-width: 7px;
+  color: azure;
+}
     button {
         background-color: orange; /* Green */
         border: none;
@@ -52,16 +57,16 @@
     <center>
 
         <br><br>
-        <p> <h4>This is a calculator app<br> Lets build something!</h4></p><br>
+        <p> <b><h4>This is a calculator app<br> Lets build something!</b></h4></p><br>
         @{
         if(ViewBag.Result != null){
-            <span> <p> @ViewBag.Result</p></span>
+            <span> <p id="result"> @ViewBag.Result</p></span>
               }
         }
 
         <form asp-controller="calc" asp-action="index" method="post">
             First number here:   <input type="number" name="first" /><br /><br />
-            Second number here: <input type="number" name="second" /><br />
+            Second number here: <input type="number" name="second" /><br /><br>
             <button type="submit"> Submit </button>
         </form>
     </center>
