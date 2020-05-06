@@ -1,0 +1,66 @@
+
+@{
+    ViewData["Title"] = "Calculator App";
+}
+
+<!doctype html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> StartNG Hospital </title>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        background-color: sienna;
+        background-size: cover;
+        font-family: 'Zilla Slab', serif;
+        font-size: 22px;
+    }
+
+    img {
+        border-radius: 8px;
+    }
+
+    a:link, a:visited {
+        background-color: green;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    a:hover, a:active {
+        background-color: red;
+    }
+
+    button {
+        background-color: orange; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+</style>
+<body>
+    <center>
+       
+        <br><br>
+        <p> <h4>This is a calculator app<br> Lets build something!</h4></p><br>
+
+      <form asp-controller="calc" asp-action ="show" method="post">
+       First number here:   <input type="number" name="first"/><br /><br />
+          Second number here: <input type="number" name="second"/><br />
+          <button type="submit"> Submit </button>
+      </form>
+    </center>
+
+</body>
+
+</html>
